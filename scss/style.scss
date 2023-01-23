@@ -12,6 +12,16 @@ body {
     margin: 0 auto;
 }
 
+h2 {
+    font-family: 'Inconsolata';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 34px;
+    text-align: center;
+    color: $orange;
+}
+
 // header
 
 .nav {
@@ -69,7 +79,7 @@ body {
             color: $orange;
         }
 
-        h2 {
+        h3 {
             font-family: 'Inconsolata';
             font-style: normal;
             font-weight: 700;
@@ -143,16 +153,6 @@ body {
         flex-direction: column;
         row-gap: 32px;
 
-        h2 {
-            font-family: 'Inconsolata';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 32px;
-            line-height: 34px;
-            text-align: center;
-            color: $orange;
-        }
-
         .box-wrapper {
             display: flex;
             justify-content: space-around;
@@ -175,6 +175,139 @@ body {
                     font-size: 32px;
                     line-height: 37px;
                     color: #fff;
+                }
+            }
+        }
+    }
+}
+
+// my-works
+
+.my-works {
+    .box-wrapper {
+        display: flex;
+        justify-content: space-around;
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            row-gap: 15px;
+            border-radius: 10px;
+            background-color: transparent;
+            width: 320px;
+            height: 320px;
+
+            h6 {
+                font-family: 'Inconsolata';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 17px;
+                color: $milk;
+                border-bottom: 1px solid $orange;
+                padding-bottom: 5px;
+            }
+
+            p {
+                font-family: 'Inconsolata';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 17px;
+                color: $milk;
+            }
+
+            h3 {
+                font-family: 'Arial';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 32px;
+                line-height: 37px;
+                color: #fff;
+            }
+
+            a {
+
+
+                span {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 12px 20px;
+                    gap: 10px;
+                    font-family: 'Inconsolata';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 15px;
+                    color: $milk;
+                    border-radius: 4px;
+                    background: $btn-color;
+                }
+            }
+        }
+    }
+}
+
+// footer
+
+.footer {
+    .footer-wrapper {
+        display: flex;
+        justify-content: space-around;
+        padding: 50px 8px;
+
+        .footer-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            padding: 0px;
+            gap: 16px;
+            width: 20%;
+
+            p {
+                font-family: 'Inconsolata';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 21px;
+                color: $milk;
+            }
+        }
+
+        .contacts-wrapper {
+            width: 30%;
+
+            .contacts {
+                display: flex;
+                flex-wrap: wrap;
+                column-gap: 15px;
+
+                .contacts-inner {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: flex-start;
+                    row-gap: 15px;
+
+                    a {
+                        text-decoration: none;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: start;
+                        text-align: center;
+                        gap: 5px;
+                        font-family: 'Inconsolata';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 24px;
+                        line-height: 25px;
+                        color: $orange;
+                    }
                 }
             }
         }

@@ -9,6 +9,16 @@ body {
   margin: 0 auto;
 }
 
+h2 {
+  font-family: "Inconsolata";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 34px;
+  text-align: center;
+  color: #FF8303;
+}
+
 .nav {
   display: flex;
   flex-wrap: wrap;
@@ -57,7 +67,7 @@ body {
   line-height: 67px;
   color: #FF8303;
 }
-.promo-wrapper .promo-my-name h2 {
+.promo-wrapper .promo-my-name h3 {
   font-family: "Inconsolata";
   font-style: normal;
   font-weight: 700;
@@ -114,15 +124,6 @@ body {
   flex-direction: column;
   row-gap: 32px;
 }
-.skills .skills-inner h2 {
-  font-family: "Inconsolata";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 34px;
-  text-align: center;
-  color: #FF8303;
-}
 .skills .skills-inner .box-wrapper {
   display: flex;
   justify-content: space-around;
@@ -145,6 +146,116 @@ body {
   font-size: 32px;
   line-height: 37px;
   color: #fff;
+}
+
+.my-works .box-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.my-works .box-wrapper .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 15px;
+  border-radius: 10px;
+  background-color: transparent;
+  width: 320px;
+  height: 320px;
+}
+.my-works .box-wrapper .box h6 {
+  font-family: "Inconsolata";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 17px;
+  color: #F0E3CA;
+  border-bottom: 1px solid #FF8303;
+  padding-bottom: 5px;
+}
+.my-works .box-wrapper .box p {
+  font-family: "Inconsolata";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17px;
+  color: #F0E3CA;
+}
+.my-works .box-wrapper .box h3 {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 37px;
+  color: #fff;
+}
+.my-works .box-wrapper .box a span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+  gap: 10px;
+  font-family: "Inconsolata";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 15px;
+  color: #F0E3CA;
+  border-radius: 4px;
+  background: #32312E;
+}
+
+.footer .footer-wrapper {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 8px;
+}
+.footer .footer-wrapper .footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 0px;
+  gap: 16px;
+  width: 20%;
+}
+.footer .footer-wrapper .footer-inner p {
+  font-family: "Inconsolata";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 21px;
+  color: #F0E3CA;
+}
+.footer .footer-wrapper .contacts-wrapper {
+  width: 30%;
+}
+.footer .footer-wrapper .contacts-wrapper .contacts {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 15px;
+}
+.footer .footer-wrapper .contacts-wrapper .contacts .contacts-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  row-gap: 15px;
+}
+.footer .footer-wrapper .contacts-wrapper .contacts .contacts-inner a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  text-align: center;
+  gap: 5px;
+  font-family: "Inconsolata";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 25px;
+  color: #FF8303;
 }
 
 /*# sourceMappingURL=style.css.map */
