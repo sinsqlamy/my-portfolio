@@ -19,6 +19,30 @@ h2 {
   color: #FF8303;
 }
 
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .nav {
   display: flex;
   flex-wrap: wrap;
@@ -36,20 +60,27 @@ h2 {
   row-gap: 10px;
   column-gap: 10px;
 }
-.nav .main-menu .nav-item:nth-child(1) {
-  color: #FF8303;
-}
 .nav .main-menu .nav-item {
   font-weight: 700;
   font-size: 20px;
   color: #F0E3CA;
+  opacity: 0.5;
+  transition: 0.3s;
   padding: 15px;
   text-decoration: none;
+}
+.nav .main-menu .nav-item:hover {
+  opacity: 1;
+}
+.nav .main-menu .active {
+  color: #FF8303;
+  opacity: 1;
 }
 
 .promo-wrapper {
   display: flex;
   flex-wrap: nowrap;
+  height: 550px;
   padding: 50px 8px;
 }
 .promo-wrapper .promo-my-name {
@@ -87,12 +118,19 @@ h2 {
   position: relative;
 }
 .promo-wrapper .promo-photo-back pre {
+  position: absolute;
+  top: 0;
+  left: 0;
   font-family: "Inconsolata";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   color: rgba(163, 87, 9, 0.5);
+}
+.promo-wrapper .promo-photo-back pre:after {
+  content: "|";
+  animation: blink 500ms linear infinite alternate;
 }
 .promo-wrapper .promo-photo-back img {
   position: absolute;
@@ -146,6 +184,25 @@ h2 {
   font-size: 32px;
   line-height: 37px;
   color: #fff;
+}
+.skills .skills-inner .box-wrapper .box path {
+  fill: #F0E3CA;
+  transition: 0.3s;
+}
+.skills .skills-inner .box-wrapper .box:hover:nth-child(1) path {
+  fill: #FC490B;
+}
+.skills .skills-inner .box-wrapper .box:hover:nth-child(2) path {
+  fill: #2196F4;
+}
+.skills .skills-inner .box-wrapper .box:hover:nth-child(3) path {
+  fill: #FFDF00;
+}
+.skills .skills-inner .box-wrapper .box:hover:nth-child(4) path {
+  fill: #CA669B;
+}
+.skills .skills-inner .box-wrapper .box:hover:nth-child(5) path {
+  fill: #F25234;
 }
 
 .my-works .box-wrapper {
