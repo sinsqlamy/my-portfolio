@@ -1,0 +1,43 @@
+/*Large Devices, Wide Screens - 1200px*/
+@mixin _1170 {
+    @media (max-width: 1170px) {
+        @content;
+    }
+}
+/*Medium Devices, Desktops - 992 px*/
+@mixin _979 {
+    @media (max-width: 979px) {
+        @content;
+    }
+}
+/* Small Device, Tablets */
+@mixin _768 {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin _600 {
+    @media (max-width: 600px) {
+        @content;
+    }
+}
+
+/*Extra Small Devices, Phones*/
+@mixin _480 {
+    @media (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin _350 {
+    @media (max-width: 350px) {
+        @content;
+    }
+}
+/* Custom, iPhone Retina */
+@mixin _320 {
+    @media (max-width: 350px) {
+        @content;
+    }
+}

@@ -1,5 +1,6 @@
-@import "../scss/components/variables.scss";
-@import "../scss/components/normalize.css";
+@import "components/variables.scss";
+@import "components/normalize.css";
+@import "components/adaptive_mixin";
 
 
 body {
@@ -8,7 +9,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -18,8 +19,8 @@ h2 {
     font-weight: 700;
     font-size: 32px;
     line-height: 34px;
-    text-align: center;
-    color: $orange;
+    text-align: start;
+    color: #fff;
 }
 
 @-webkit-keyframes blink{
@@ -41,16 +42,17 @@ h2 {
 
 .nav {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
 
     .logo-svg {
-        margin: 20px;
+        padding: 20px;
     }
 
     .main-menu {
         width: 530px;
-        margin: 20px 0;
+        padding: 20px 0;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -82,9 +84,14 @@ h2 {
 
 .promo-wrapper {
     display: flex;
+    justify-content: space-between;
     flex-wrap: nowrap;
-    height: 550px;
-    padding: 50px 8px;
+    
+    padding: 50px 0px;
+
+    @include _480 {
+        flex-wrap: wrap;
+    }
 
     .promo-my-name {
         display: flex;
@@ -122,9 +129,10 @@ h2 {
     }
 
     .promo-photo-back {
-        position: relative;
+        position: relative; 
+        width: 600px;
+        min-height: 550px;
         
-
 
         pre {
             position: absolute;
@@ -141,20 +149,23 @@ h2 {
                 content: "|";
                 animation: blink 500ms linear infinite alternate;
             }
+
+            @include _480 {
+                font-size: 12px;
+            }
             
         }
 
         img {
             position: absolute;
-            left: 200px;
-            top: 150px;
-        }
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
 
-        .white-rectangle {
-            top: 100px;
-        }
-
-
+            @include _480 {
+                width: 300px;
+            }
+        }     
     }
 }
 
@@ -163,6 +174,7 @@ h2 {
 .about-me-wrapper {
     padding: 50px 8px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 
@@ -183,12 +195,15 @@ h2 {
     .skills-inner {
         padding: 50px 8px;
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
         row-gap: 32px;
 
         .box-wrapper {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-around;
+            row-gap: 32px;
 
             .box {
                 display: flex;
@@ -257,6 +272,7 @@ h2 {
 .my-works {
     .box-wrapper {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-around;
 
         .box {
@@ -270,7 +286,7 @@ h2 {
             width: 320px;
             height: 320px;
 
-            h6 {
+            h4 {
                 font-family: 'Inconsolata';
                 font-style: normal;
                 font-weight: 500;
@@ -290,18 +306,7 @@ h2 {
                 color: $milk;
             }
 
-            h3 {
-                font-family: 'Arial';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 32px;
-                line-height: 37px;
-                color: #fff;
-            }
-
             a {
-
-
                 span {
                     display: flex;
                     flex-direction: row;
@@ -328,17 +333,19 @@ h2 {
 .footer {
     .footer-wrapper {
         display: flex;
+        align-items: center;
+        flex-wrap: wrap;
         justify-content: space-around;
-        padding: 50px 8px;
+        padding: 50px 0px;
 
         .footer-inner {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
             flex-wrap: wrap;
             padding: 0px;
             gap: 16px;
-            width: 20%;
+            width: 35%;
 
             p {
                 font-family: 'Inconsolata';
@@ -355,11 +362,12 @@ h2 {
 
             .contacts {
                 display: flex;
-                flex-wrap: wrap;
+                flex-wrap: nowrap;
                 column-gap: 15px;
 
                 .contacts-inner {
                     display: flex;
+                    flex-wrap: wrap;
                     flex-direction: column;
                     justify-content: space-around;
                     align-items: flex-start;
