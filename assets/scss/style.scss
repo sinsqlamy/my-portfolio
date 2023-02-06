@@ -23,19 +23,34 @@ h2 {
     color: #fff;
 }
 
-@-webkit-keyframes blink{
-    0%{opacity: 0;}
-    100%{opacity: 1;}
+@-webkit-keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
-@-moz-keyframes blink{
-    0%{opacity: 0;}
-    100%{opacity: 1;}
+@-moz-keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
-@keyframes blink{
-    0%{opacity: 0;}
-    100%{opacity: 1;}
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 // header
@@ -86,19 +101,20 @@ h2 {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-    
+
     padding: 50px 0px;
 
     @include _480 {
         flex-wrap: wrap;
     }
 
-    .promo-my-name {
+    .promo-inner {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        flex-wrap: nowrap;
         gap: 15px;
+        padding-bottom: 30px;
+
 
         h1 {
             font-family: 'Inconsolata';
@@ -107,6 +123,7 @@ h2 {
             font-size: 48px;
             line-height: 67px;
             color: $orange;
+            margin: 0;
         }
 
         h3 {
@@ -116,6 +133,7 @@ h2 {
             font-size: 32px;
             line-height: 42px;
             color: $milk;
+            margin: 0;
         }
 
         p {
@@ -126,18 +144,18 @@ h2 {
             line-height: 21px;
             color: $milk;
         }
+
+
     }
 
     .promo-photo-back {
-        position: relative; 
+        position: relative;
         width: 600px;
         min-height: 550px;
-        
+
 
         pre {
-            position: absolute;
-            top: 0;
-            left: 0;
+
             font-family: 'Inconsolata';
             font-style: normal;
             font-weight: 400;
@@ -145,7 +163,17 @@ h2 {
             line-height: 19px;
             color: $light-orange;
 
-            &:after{
+            @include _480 {
+                font-family: Inconsolata;
+                font-size: 9px;
+                font-weight: 400;
+                line-height: 13px;
+                letter-spacing: 0em;
+                text-align: left;
+
+            }
+
+            &:after {
                 content: "|";
                 animation: blink 500ms linear infinite alternate;
             }
@@ -153,7 +181,7 @@ h2 {
             @include _480 {
                 font-size: 12px;
             }
-            
+
         }
 
         img {
@@ -165,14 +193,15 @@ h2 {
             @include _480 {
                 width: 300px;
             }
-        }     
+        }
     }
+
 }
 
 // about-me
 
 .about-me-wrapper {
-    padding: 50px 8px;
+    padding: 30px 8px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -215,7 +244,7 @@ h2 {
                 background-color: $box-bg;
                 width: 200px;
                 height: 300px;
-                
+
 
 
                 h3 {
@@ -283,8 +312,8 @@ h2 {
             row-gap: 15px;
             border-radius: 10px;
             background-color: transparent;
-            width: 320px;
-            height: 320px;
+            max-width: 320px;
+            max-width: 320px;
 
             h4 {
                 font-family: 'Inconsolata';
@@ -328,6 +357,7 @@ h2 {
     }
 }
 
+
 // footer
 
 .footer {
@@ -338,8 +368,14 @@ h2 {
         justify-content: space-around;
         padding: 50px 0px;
 
+        @include _480 {
+            flex-direction: column;
+        }
+
         .footer-inner {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             flex-direction: column;
             align-items: center;
             flex-wrap: wrap;
@@ -355,37 +391,37 @@ h2 {
                 line-height: 21px;
                 color: $milk;
             }
-        }
 
-        .contacts-wrapper {
-            width: 30%;
+            .contacts-wrapper {
+                width: 30%;
 
-            .contacts {
-                display: flex;
-                flex-wrap: nowrap;
-                column-gap: 15px;
-
-                .contacts-inner {
+                .contacts {
                     display: flex;
-                    flex-wrap: wrap;
-                    flex-direction: column;
-                    justify-content: space-around;
-                    align-items: flex-start;
-                    row-gap: 15px;
+                    flex-wrap: nowrap;
+                    column-gap: 15px;
 
-                    a {
-                        text-decoration: none;
+                    .contacts-inner {
                         display: flex;
-                        flex-direction: row;
-                        justify-content: start;
-                        text-align: center;
-                        gap: 5px;
-                        font-family: 'Inconsolata';
-                        font-style: normal;
-                        font-weight: 400;
-                        font-size: 24px;
-                        line-height: 25px;
-                        color: $orange;
+                        flex-wrap: wrap;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        align-items: flex-start;
+                        row-gap: 15px;
+
+                        a {
+                            text-decoration: none;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: start;
+                            text-align: center;
+                            gap: 5px;
+                            font-family: 'Inconsolata';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 24px;
+                            line-height: 25px;
+                            color: $orange;
+                        }
                     }
                 }
             }
