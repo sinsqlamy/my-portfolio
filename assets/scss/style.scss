@@ -19,8 +19,9 @@ h2 {
     font-weight: 700;
     font-size: 32px;
     line-height: 34px;
-    text-align: start;
-    color: #fff;
+    text-align: center;
+    color: #FF8303;
+
 }
 
 @-webkit-keyframes blink {
@@ -100,19 +101,18 @@ h2 {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-
     padding: 50px 10px;
-
-    @include _480 {
-        flex-wrap: wrap;
+    
+    @include _768 {
+        flex-wrap: wrap;    
     }
 
-    .promo-inner {
+    .promo-my-name {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 15px;
         padding-bottom: 30px;
+        width: 450px;
 
 
         h1 {
@@ -123,6 +123,16 @@ h2 {
             line-height: 67px;
             color: $orange;
             margin: 0;
+        }
+
+        h2 {
+            font-family: 'Inconsolata';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 34px;
+            text-align: start;
+            color: #fff;
         }
 
         h3 {
@@ -149,11 +159,14 @@ h2 {
 
     .promo-photo-back {
         position: relative;
-        width: 100%;
+        width: 600px;
         height: 660px;
+
+        
 
         @include _480 {
             height: 330px;
+            padding-bottom: 80px;
         }
 
         pre {
@@ -203,10 +216,12 @@ h2 {
     padding: 0px 8px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    column-gap: 15px;
 
     p {
+        width: 1000px;
         font-family: 'Inconsolata';
         font-style: normal;
         font-weight: 400;
@@ -226,6 +241,7 @@ h2 {
         flex-wrap: wrap;
         flex-direction: column;
         row-gap: 32px;
+
 
         .box-wrapper {
             display: flex;
@@ -298,11 +314,13 @@ h2 {
 // my-works
 
 .my-works {
+    padding: 50px 0;
+
     .box-wrapper {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-
+        
         .box {
             display: flex;
             justify-content: center;
@@ -360,5 +378,75 @@ h2 {
 // footer
 
 .footer {
-    
+    .footer-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 30px;
+        padding: 50px 0;
+
+        .footer-inner {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: start;
+            justify-content: center;
+
+            @include _480 {
+                align-items: center;
+            }
+            
+
+            p {
+                width: 300px;
+                font-family: 'Inconsolata';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 21px;
+                color: #F0E3CA;
+            }
+
+            h2 {
+                text-align: start;
+
+                @include _480 {
+                    text-align: center;
+                }
+            }
+
+            .contacts {
+                display: flex;
+                flex-wrap: wrap;
+                max-width: 500px;
+
+                .contacts-inner {
+                    display: flex;
+                    justify-content: start;
+                    gap: 5px;
+
+                    @include _480 {
+                        justify-content: center;
+                        flex-wrap: wrap; 
+                    }
+
+                    a {
+                        gap: 5px;
+                        width: 300px;
+                        display: flex;
+                        align-items: center;
+                        text-decoration: none;
+                        font-family: 'Inconsolata';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 24px;
+                        line-height: 25px;
+                        color: #FF8303;
+
+                        
+                    }
+                }
+            }
+        }
+    }
 }
