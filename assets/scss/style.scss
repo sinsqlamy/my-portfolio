@@ -62,7 +62,7 @@ h2 {
     justify-content: space-between;
 
     .logo-svg {
-        padding: 20px;
+        padding: 10px;
     }
 
     .main-menu {
@@ -71,8 +71,7 @@ h2 {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        row-gap: 10px;
-        column-gap: 10px;
+        gap: 10px;
 
         .nav-item {
             font-weight: 700;
@@ -102,7 +101,7 @@ h2 {
     justify-content: space-between;
     flex-wrap: nowrap;
 
-    padding: 50px 0px;
+    padding: 50px 10px;
 
     @include _480 {
         flex-wrap: wrap;
@@ -150,17 +149,23 @@ h2 {
 
     .promo-photo-back {
         position: relative;
-        width: 600px;
-        min-height: 550px;
+        width: 100%;
+        height: 660px;
 
+        @include _480 {
+            height: 330px;
+        }
 
         pre {
-
+            display: inline-block;
+            width: 100%;
+            height: 100%;
             font-family: 'Inconsolata';
             font-style: normal;
             font-weight: 400;
             font-size: 16px;
             line-height: 19px;
+            text-align: start;
             color: $light-orange;
 
             @include _480 {
@@ -170,18 +175,12 @@ h2 {
                 line-height: 13px;
                 letter-spacing: 0em;
                 text-align: left;
-
             }
 
             &:after {
                 content: "|";
                 animation: blink 500ms linear infinite alternate;
             }
-
-            @include _480 {
-                font-size: 12px;
-            }
-
         }
 
         img {
@@ -191,7 +190,7 @@ h2 {
             transform: translate(-50%, -50%);
 
             @include _480 {
-                width: 300px;
+                width: 250px;
             }
         }
     }
@@ -201,7 +200,7 @@ h2 {
 // about-me
 
 .about-me-wrapper {
-    padding: 30px 8px;
+    padding: 0px 8px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -361,70 +360,5 @@ h2 {
 // footer
 
 .footer {
-    .footer-wrapper {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        padding: 50px 0px;
-
-        @include _480 {
-            flex-direction: column;
-        }
-
-        .footer-inner {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-            flex-wrap: wrap;
-            padding: 0px;
-            gap: 16px;
-            width: 35%;
-
-            p {
-                font-family: 'Inconsolata';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 20px;
-                line-height: 21px;
-                color: $milk;
-            }
-
-            .contacts-wrapper {
-                width: 30%;
-
-                .contacts {
-                    display: flex;
-                    flex-wrap: nowrap;
-                    column-gap: 15px;
-
-                    .contacts-inner {
-                        display: flex;
-                        flex-wrap: wrap;
-                        flex-direction: column;
-                        justify-content: space-around;
-                        align-items: flex-start;
-                        row-gap: 15px;
-
-                        a {
-                            text-decoration: none;
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: start;
-                            text-align: center;
-                            gap: 5px;
-                            font-family: 'Inconsolata';
-                            font-style: normal;
-                            font-weight: 400;
-                            font-size: 24px;
-                            line-height: 25px;
-                            color: $orange;
-                        }
-                    }
-                }
-            }
-        }
-    }
+    
 }
